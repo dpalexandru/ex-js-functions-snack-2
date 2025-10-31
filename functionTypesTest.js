@@ -43,3 +43,18 @@ const eseguiOperazione = (a, b, operazione) => operazione(a, b);
 console.log("---- snak 3 ------")
 console.log(eseguiOperazione(4, 5, somma2))
 console.log(eseguiOperazione(3, 3, moltiplica))
+
+//Crea un generatore di funzioni creaTimer
+//Scrivi una funzione creaTimer che accetta un tempo (in ms) e restituisce una nuova funzione che avvia un setTimeout per stampare "Tempo scaduto!".
+
+function creaTimer(tempo) {
+  return () => {
+    setTimeout(() => {
+      console.log("tempo scaduto!")
+    }, tempo)
+
+  }
+}
+
+const timer3s = (creaTimer(3000))
+timer3s()
