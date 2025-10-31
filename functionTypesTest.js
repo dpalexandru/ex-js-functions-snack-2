@@ -28,7 +28,18 @@ const sommaArrow = (a, b) => {
 sommaArrow(7, 7);
 
 //Crea una arrow function che calcola il quadrato di un numero.
-//Definisci una funzione chiamata quadrato che accetta un numero e restituisce il suo quadrato in una sola riga.
+//Definisci una funziones chiamata quadrato che accetta un numero e restituisce il suo quadrato in una sola riga.
 
 const quadrato = (a) => a * a;
 console.log(quadrato(4))
+
+//Definisci una funzione eseguiOperazione che accetta tre parametri: due numeri e una funzione operatore (callback). La funzione deve eseguire l'operazione fornita sui due numeri.
+
+const somma2 = (a, b) => a + b;
+const moltiplica = (a, b) => a * b;
+
+const eseguiOperazione = (a, b, operazione) => operazione(a, b);
+
+console.log("---- snak 3 ------")
+console.log(eseguiOperazione(4, 5, somma2))
+console.log(eseguiOperazione(3, 3, moltiplica))
